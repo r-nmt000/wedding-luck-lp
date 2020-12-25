@@ -1,0 +1,18 @@
+export { default as ContainerFlex } from './page/ContainerFlex'
+export { default as PageHead } from './page/PageHead'
+export { default as Footer } from './page/Footer'
+// export { googlePageview, googleEvent } from './page/GoogleAnalytics'
+
+export { default as Block } from './landing/Block'
+export { default as Features } from './landing/Features'
+export { default as Headline } from './landing/Headline'
+export { default as Image } from './landing/Image'
+export { default as Pricing } from './landing/Pricing'
+export { default as SignupBlock } from './landing/SignupBlock'
+export { default as SignupForm } from './landing/SignupForm'
+export { default as Testimonials } from './landing/Testimonials'
+export { default as Video } from './landing/Video'
+
+export { default as InstagramFollowButton } from './social/InstagramFollowButton'
+export { default as SocialFollow } from './social/SocialFollow'
+export { default as SocialSharing } from './social/SocialSharing'

@@ -1,0 +1,52 @@
+{
+  "name": "nextjs-generic-landing-page",
+  "version": "1.1.0",
+  "description": "A generic landing page template, built in Next.js (React) with static HTML export",
+  "main": "dist/components/index.js",
+  "private": false,
+  "scripts": {
+    "now": "now dev --listen 3010",
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start -p 3010",
+    "export": "next build && next export",
+    "x-prepublish": "rm -rf dist && for folder in {components,lib,config,public}; do mkdir -p dist/${folder} && babel ${folder} -d dist/${folder} --copy-files --presets=@babel/preset-env,next --plugins=styled-jsx/babel; done && cp package.json dist/",
+    "lint": "standard",
+    "fix": "standard --fix"
+  },
+  "files": [
+    "dist/"
+  ],
+  "standard": {
+    "ignore": [
+      ".next/",
+      "next.config.js",
+      "dist/"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "dependencies": {
+    "next": "^10.0.3",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-fb-like": "^0.5.1",
+    "react-share": "^3.0.1",
+    "react-twitter-embed": "^3.0.3"
+  },
+  "peerDependencies": {
+    "styled-jsx": "latest"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
